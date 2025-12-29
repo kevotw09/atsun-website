@@ -5,12 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>與我們聯絡 - 宏翔科技 Atsun Technology</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin-top: 40px;
+        }
+
+        .contact-info h2 {
+            color: #008080;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .info-list p {
+            margin: 12px 0;
+            font-size: 1.05em;
+        }
+
+        .map-container {
+            width: 100%;
+            height: 450px;
+            margin: 40px 0;
+            border: 1px solid #ddd;
+        }
+
+        .inquiry-form {
+            background-color: #f9fbfb;
+            padding: 30px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; 
+        }
+    </style>
 </head>
 <body>
+
     <div class="container">
         
-        <header>
-            <a href="default.html"><img src="images/F2.gif" alt="Atsun Technology Logo"></a>
+        <header id="top">
+            <a href="default.html"><img src="images/F2.gif" alt="宏翔科技 Logo"></a>
         </header>
 
         <nav>
@@ -22,28 +74,69 @@
             <a href="contact.html" class="active-page">[與我們聯絡]</a>
         </nav>
 
-        <main>
+        <main class="full-main-content">
             <h1>與我們聯絡 (Contact Us)</h1>
-            <p>若您對我們的產品、服務或網路工程規劃有任何疑問，歡迎透過以下方式與我們聯絡：</p>
-            
-            <div class="cert-box">
-                <p><strong>宏翔科技 Atsun Technology</strong></p>
-                <p>📍 <strong>地址：</strong>70268 臺南市新興路533巷33弄16號</p>
-                <p>📞 <strong>電話：</strong>(06) 261-9821</p>
-                <p>📠 <strong>傳真：</strong>(06) 261-1528</p>
-                <p>✉️ <strong>Email：</strong><a href="mailto:atsuntec@gmail.com">atsuntec@gmail.com</a></p>
-                <p>👤 <strong>業務連絡人：</strong>陳南宏 先生</p>
+            <p>如果您對我們的產品、服務或機房規劃有任何疑問，歡迎填寫下方表單或透過以下資訊與我們聯繫。</p>
+            <hr>
+
+            <div class="contact-grid">
+                
+                <div class="contact-info">
+                    <h2>宏翔科技 Atsun Technology</h2>
+                    <div class="info-list">
+                        <p>📍 <strong>地址：</strong>70268 臺南市南區新興路 533 巷 33 弄 16 號</p>
+                        <p>📞 <strong>電話：</strong>(06) 261-9821</p>
+                        <p>📠 <strong>傳真：</strong>(06) 261-1528</p>
+                        <p>✉️ <strong>Email：</strong><a href="mailto:atsuntec@gmail.com" style="color: #008080; text-decoration: none; font-weight: bold;">atsuntec@gmail.com</a></p>
+                        <p>👤 <strong>業務連絡人：</strong>陳南宏 先生</p>
+                        <p>🕒 <strong>服務時間：</strong>週一至週五 08:30 - 18:00</p>
+                    </div>
+                </div>
+
+                <div class="inquiry-form">
+                    <h3>快速諮詢 / 詢價</h3>
+                    <form action="https://formspree.io/f/mregywll" method="POST">
+                        <div class="form-group">
+                            <label>公司名稱：</label>
+                            <input type="text" name="company_name" placeholder="例如：宏翔科技" required>
+                        </div>
+                        <div class="form-group">
+                            <label>聯絡人姓名：</label>
+                            <input type="text" name="contact_name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>聯絡電話：</label>
+                            <input type="tel" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label>需求描述：</label>
+                            <textarea name="message" rows="4" placeholder="請簡述您的需求..." required></textarea>
+                        </div>
+                        <input type="text" name="_gotcha" style="display:none">
+                        <button type="submit" class="action-btn" style="border: none; cursor: pointer; width: 100%;">送出訊息</button>
+                    </form>
+                </div>
             </div>
 
-            <div style="text-align: center; margin-top: 30px;">
-                <p>服務時間：週一至週五 09:00 - 18:00</p>
-                <img src="images/logo_avaya.gif" alt="Avaya Authorized Partner Logo" width="145" height="41">
+            <h2>公司位置圖 (Location)</h2>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.373198071762!2d120.18520807696592!3d22.973300179208398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e75dca76db755%3A0xd244b2b71ddd1cb8!2z5a6P57-U56eR5oqA5pyJ6ZmQ5YWs5Y-4!5e0!3m2!1sen!2sus!4v1766982372350!5m2!1sen!2sus" width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy"></iframe>
+            </div>
+
+            <div class="back-to-top">
+                <a href="#top">↑ 回到頂端 (Back to Top)</a>
             </div>
         </main>
 
         <footer>
-            <p>&copy; 宏翔科技 Atsun Technology. All rights reserved.</p>
+            <p>© 宏翔科技 Atsun Technology. All rights reserved.</p>
         </footer>
+
     </div>
+
 </body>
 </html>
