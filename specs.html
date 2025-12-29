@@ -29,124 +29,140 @@
                 <h3>技術文件導覽</h3>
                 <ul class="product-menu">
                     <li><strong>測試參數定義</strong></li>
-                    <li class="sub-item"><a href="#params-def" class="active">重要參數定義</a></li>
-                    <li class="sub-item"><a href="#test-example">測試報告範例</a></li>
+                    <li class="sub-item"><a href="#params-def" class="active">參數定義總表</a></li>
+                    <li class="sub-item"><a href="#test-example">實際測試範例</a></li>
                     
                     <li style="margin-top:15px;"><strong>品牌產品規格</strong></li>
-                    <li class="sub-item"><a href="#gigaspeed">GigaSPEED 系列</a></li>
-                    <li class="sub-item"><a href="#powersum">PowerSum 系列</a></li>
-                    <li class="sub-item"><a href="#optispeed">OptiSPEED 系列</a></li>
+                    <li class="sub-item"><a href="#gigaspeed">GigaSPEED 詳細規格</a></li>
+                    <li class="sub-item"><a href="#powersum">PowerSum 詳細規格</a></li>
+                    <li class="sub-item"><a href="#optispeed">OptiSPEED 詳細規格</a></li>
 
                     <li class="back-catalog-header"><strong>回產品目錄 (Products)</strong></li>
-                    <li class="sub-item">
-                        <a href="product-gigabit.html" class="back-link">← 銅纜/Gigabit 系列</a>
-                    </li>
-                    <li class="sub-item">
-                        <a href="product-fiber-series.html" class="back-link">← 光纖線材系列</a>
-                    </li>
-                    <li class="sub-item">
-                        <a href="products.html" class="back-link">← 所有產品總覽</a>
-                    </li>
+                    <li class="sub-item"><a href="products.html" class="back-link">← 所有產品總覽</a></li>
                 </ul>
             </aside>
 
             <main class="main-content">
                 <h1>技術參數與規格說明 (Technical Specifications)</h1>
-                <p>本頁面提供網路測試報告之專有名詞定義，以及 SYSTIMAX 各系列產品之物理與電氣規格參考。</p>
                 <hr>
 
-                <h2 id="params-def">測試報告重要參數說明 (Definitions)</h2>
+                <h2 id="params-def">測試報告參數詳解 (Glossary)</h2>
+                
                 <div class="table-container">
                     <table class="spec-table">
                         <thead>
-                            <tr>
-                                <th width="35%">參數名稱 (Parameter)</th>
-                                <th>定義說明 (Description)</th>
-                            </tr>
+                            <tr><th width="35%">參數名稱</th><th>定義說明</th></tr>
                         </thead>
                         <tbody>
-                            <tr><td><strong>Attenuation (dB)</strong></td><td>訊號衰減值：訊號在傳輸過程中損失的能量。</td></tr>
-                            <tr><td><strong>NEXT (dB)</strong></td><td>近端串音 (Near-End Crosstalk)：線對間的干擾值。</td></tr>
-                            <tr><td><strong>Headroom</strong></td><td>淨空高度：NEXT 測試值與標準極限值間的最小差值。</td></tr>
-                            <tr><td><strong>Return Loss (dB)</strong></td><td>反射損耗：由於阻抗不匹配引起的訊號反射。</td></tr>
+                            <tr><td><strong>Attenuation (dB)</strong></td><td>訊號衰減值</td></tr>
+                            <tr><td><strong>Cable ID / Type</strong></td><td>線的編號與種類</td></tr>
+                            <tr><td><strong>Delay Skew (ns)</strong></td><td>各絞線對中 Prop. Delay 值與最小值的差</td></tr>
+                            <tr><td><strong>FLUKE DSP S/N</strong></td><td>測試儀器之型號與序號</td></tr>
+                            <tr><td><strong>HEADROOM</strong></td><td>NEXT 與 Limit 差之最小值</td></tr>
+                            <tr><td><strong>Impedance (Ohms)</strong></td><td>阻抗 (Limit 80-120 Ohms)</td></tr>
+                            <tr><td><strong>Length (M)</strong></td><td>長度 (Limit 100.0 m)</td></tr>
+                            <tr><td><strong>Limit (dB)</strong></td><td>標準規定的極限值</td></tr>
+                            <tr><td><strong>Margin (dB)</strong></td><td>測試值與極限值之差額</td></tr>
+                            <tr><td><strong>NEXT (dB)</strong></td><td>近端串音</td></tr>
+                            <tr><td><strong>NVP</strong></td><td>標稱傳播速度 (訊號速度/光速 * 100%)</td></tr>
+                            <tr><td><strong>OPERATOR</strong></td><td>測試執行廠商</td></tr>
+                            <tr><td><strong>Prop. Delay (ns)</strong></td><td>訊號在測試線路傳遞之時間</td></tr>
+                            <tr><td><strong>Test Standard</strong></td><td>測試標準 (如 TIA Cat.5/Cat.6)</td></tr>
+                            <tr><td><strong>Wire Map</strong></td><td>線的腳位圖 (確認 1-8 芯連接狀況)</td></tr>
                         </tbody>
                     </table>
                 </div>
 
                 <hr>
 
-                <h2 id="test-example">實際測試報告範例 (Real Example)</h2>
+                <h2 id="test-example">實際測試範例 (Real Example)</h2>
                 <div class="cert-box">
-                    <p><strong>案件名稱：台南縣立文化中心</strong> <span style="float:right; color: #008080; font-weight: bold;">Result: PASS</span></p>
+                    <p><strong>案件：台南縣立文化中心</strong> | <strong>Result: PASS</strong></p>
+                    <p style="font-size: 0.9em; color: #666;">Date: 2003/11/19 | Cable ID: 4 | Type: UTP 100 Ohm Cat 6</p>
+                    
                     <div class="table-container">
-                        <table class="data-table" style="font-size: 0.9em;">
-                            <tr class="sub-header">
-                                <td>測試項目 (Pairs)</td>
-                                <td>1,2</td>
-                                <td>3,6</td>
-                                <td>4,5</td>
-                                <td>7,8</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Impedance (Ohms)</strong></td>
-                                <td>107</td>
-                                <td>110</td>
-                                <td>108</td>
-                                <td>106</td>
-                            </tr>
-                            <tr>
-                                <td><strong>NEXT Margin (dB)</strong></td>
-                                <td>15.6</td>
-                                <td>13.4</td>
-                                <td>24.5</td>
-                                <td>17.5</td>
-                            </tr>
+                        <table class="data-table" style="text-align: center;">
+                            <tr class="sub-header"><td>Pairs</td><td>1,2</td><td>3,6</td><td>4,5</td><td>7,8</td></tr>
+                            <tr><td><strong>Impedance</strong></td><td>107</td><td>110</td><td>108</td><td>106</td></tr>
+                            <tr><td><strong>Length (m)</strong></td><td>28.2</td><td>28.0</td><td>27.6</td><td>28.0</td></tr>
+                            <tr><td><strong>Prop. Delay</strong></td><td>59</td><td>58</td><td>56</td><td>59</td></tr>
+                            <tr><td><strong>Return Loss</strong></td><td>21.4</td><td>18.0</td><td>23.3</td><td>24.4</td></tr>
+                            <tr><td><strong>Attenuation</strong></td><td>2.5</td><td>2.5</td><td>2.4</td><td>2.4</td></tr>
+                        </table>
+                    </div>
+
+                    <h3 style="font-size: 1em; margin-top: 20px;">NEXT 交叉對測試數據 (Cross-Pair Data)</h3>
+                    
+                    <div class="table-container">
+                        <table class="data-table" style="text-align: center; font-size: 0.85em;">
+                            <tr class="sub-header"><td>Pairs</td><td>1,2-3,6</td><td>1,2-4,5</td><td>1,2-7,8</td><td>3,6-4,5</td><td>3,6-7,8</td><td>4,5-7,8</td></tr>
+                            <tr><td><strong>NEXT (dB)</strong></td><td>43.0</td><td>46.1</td><td>53.2</td><td>35.6</td><td>42.9</td><td>47.2</td></tr>
+                            <tr><td><strong>Limit (dB)</strong></td><td>27.4</td><td>32.7</td><td>28.7</td><td>27.1</td><td>27.2</td><td>29.7</td></tr>
+                            <tr><td><strong>Margin (dB)</strong></td><td>15.6</td><td>13.4</td><td>24.5</td><td>8.5</td><td>15.7</td><td>17.5</td></tr>
                         </table>
                     </div>
                 </div>
 
                 <hr>
 
-                <h2 id="gigaspeed">GigaSPEED &reg; Specifications</h2>
+                <h2 id="gigaspeed">GigaSPEED &reg; 完整規格</h2>
                 <div class="table-container">
                     <table class="spec-table">
+                        <tr class="sub-header"><th colspan="2">1071C 4-pair 物理與電氣規格</th></tr>
+                        <tr><td width="50%">Gauge / NVP</td><td>24 AWG / 0.69</td></tr>
+                        <tr><td>Weight / OD</td><td>10.9kg (305m) / 5.6mm</td></tr>
+                        <tr><td>Pulling Tension (Max/Break)</td><td>11 kg / 41 kg</td></tr>
+                        <tr><td>Temp Range</td><td>-20 to 60 °C</td></tr>
+                        <tr><td>DC Resistance / Unbalance</td><td>9.4 ohms per 100m / < 3%</td></tr>
+                    </table>
+                </div>
+
+                <h3>Channel Performance Specification (頻率效能表)</h3>
+                <div class="table-container">
+                    <table class="data-table" style="text-align: center; font-size: 0.8em;">
                         <thead>
-                            <tr><th colspan="2">1071C 4-pair PHYSICAL SPECIFICATIONS</th></tr>
+                            <tr class="sub-header"><th>MHz</th><th>Atten</th><th>PS-pr</th><th>PS-Ret</th><th>Phase</th><th>NEXT</th><th>ELFEXT</th><th>Loss</th></tr>
                         </thead>
                         <tbody>
-                            <tr><td width="50%"><strong>Gauge</strong></td><td>24 AWG</td></tr>
-                            <tr><td><strong>Outside Diameter</strong></td><td>5.6 mm</td></tr>
-                            <tr><td><strong>NVP</strong></td><td>0.69 (69%)</td></tr>
+                            <tr><td>1</td><td>2.2</td><td>72.7</td><td>70.3</td><td>63.2</td><td>60.2</td><td>19.0</td><td>580</td></tr>
+                            <tr><td>10</td><td>6.5</td><td>56.6</td><td>54.0</td><td>43.2</td><td>40.2</td><td>19.0</td><td>555</td></tr>
+                            <tr><td>100</td><td>21.7</td><td>39.9</td><td>37.1</td><td>23.2</td><td>20.2</td><td>12.0</td><td>547</td></tr>
+                            <tr><td>250</td><td>36.0</td><td>33.1</td><td>30.2</td><td>15.3</td><td>12.3</td><td>8.0</td><td>546</td></tr>
                         </tbody>
                     </table>
                 </div>
 
                 <hr>
 
-                <h2 id="powersum">PowerSum Performance Data</h2>
+                <h2 id="powersum">PowerSum 系列規格</h2>
                 <div class="table-container">
-                    <table class="data-table">
-                        <thead>
-                            <tr>
-                                <th>Frequency (MHz)</th>
-                                <th>Attenuation (dB/100m)</th>
-                                <th>NEXT (Ave) dB</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr><td>1 MHz</td><td>1.9</td><td>73</td></tr>
-                            <tr><td>100 MHz</td><td>20.7</td><td>42</td></tr>
-                        </tbody>
+                    <table class="spec-table">
+                        <tr class="sub-header"><th colspan="2">物理規格與特性</th></tr>
+                        <tr><td width="50%">Temp Range</td><td>-10 to 60 °C</td></tr>
+                        <tr><td>Contact Plating</td><td>1.27 um Gold over 1.905 um Nickel</td></tr>
+                        <tr><td>Plug Retention Force</td><td>27 to 110 N</td></tr>
+                        <tr><td>Insertion Life</td><td>> 200 Insertions</td></tr>
                     </table>
                 </div>
 
-                <div style="text-align: center; margin-top: 50px;">
-                    <p>需要查詢具體產品？</p>
-                    <a href="product-gigabit.html" class="action-btn">查看 GigaSPEED 銅纜產品 →</a>
+                <hr>
+
+                <h2 id="optispeed">OptiSPEED &reg; 完整規格</h2>
+                
+                <div class="table-container">
+                    <table class="spec-table">
+                        <tr class="sub-header"><th colspan="2">DSX Cables & ST Connectors</th></tr>
+                        <tr><td width="50%">Max Nominal Length</td><td>6 km</td></tr>
+                        <tr><td>Bending Radius (Load/No Load)</td><td>20x / 10x Cable Diameter</td></tr>
+                        <tr><td>Max Pulling Tension</td><td>275 kg</td></tr>
+                        <tr><td>ST Connector Length / Loss</td><td>5.64 cm / 0.3 dB</td></tr>
+                        <tr><td>Installation Time (EZ Method)</td><td>1 to 5 mins</td></tr>
+                        <tr><td>600A2 Shelf (H x W x D)</td><td>4.37 x 43.18 x 20.32 cm</td></tr>
+                    </table>
                 </div>
 
-                <div class="back-to-top" style="text-align: right; margin-top: 40px; border-top: 1px dashed #ddd; padding-top: 10px;">
-                    <a href="#top" style="text-decoration: none; color: #008080; font-weight: bold;">↑ 回到頂端 (Back to Top)</a>
+                <div class="back-to-top">
+                    <a href="#top">↑ 回到頂端 (Back to Top)</a>
                 </div>
             </main>
         </div>
