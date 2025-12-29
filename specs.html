@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>重要參數與規格說明 - 宏翔科技 Atsun Technology</title>
+    <title>技術參數與規格說明 - 宏翔科技 Atsun Technology</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <div class="container">
         
-        <header>
+        <header id="top">
             <a href="default.html"><img src="images/F2.gif" alt="宏翔科技 Logo"></a>
         </header>
 
@@ -28,14 +28,25 @@
             <aside class="sidebar">
                 <h3>技術文件導覽</h3>
                 <ul class="product-menu">
-                    <li><strong>測試參數 (Test Params)</strong></li>
-                    <li class="sub-item"><a href="#params-def" class="active">參數定義說明</a></li>
+                    <li><strong>測試參數定義</strong></li>
+                    <li class="sub-item"><a href="#params-def" class="active">重要參數定義</a></li>
                     <li class="sub-item"><a href="#test-example">測試報告範例</a></li>
                     
-                    <li style="margin-top:15px;"><strong>產品規格 (Product Specs)</strong></li>
+                    <li style="margin-top:15px;"><strong>品牌產品規格</strong></li>
                     <li class="sub-item"><a href="#gigaspeed">GigaSPEED 系列</a></li>
                     <li class="sub-item"><a href="#powersum">PowerSum 系列</a></li>
                     <li class="sub-item"><a href="#optispeed">OptiSPEED 系列</a></li>
+
+                    <li class="back-catalog-header"><strong>回產品目錄 (Products)</strong></li>
+                    <li class="sub-item">
+                        <a href="product-gigabit.html" class="back-link">← 銅纜/Gigabit 系列</a>
+                    </li>
+                    <li class="sub-item">
+                        <a href="product-fiber-series.html" class="back-link">← 光纖線材系列</a>
+                    </li>
+                    <li class="sub-item">
+                        <a href="products.html" class="back-link">← 所有產品總覽</a>
+                    </li>
                 </ul>
             </aside>
 
@@ -44,7 +55,7 @@
                 <p>本頁面提供網路測試報告之專有名詞定義，以及 SYSTIMAX 各系列產品之物理與電氣規格參考。</p>
                 <hr>
 
-                <h2 id="params-def">測試報告重要參數說明 (Parameter Definitions)</h2>
+                <h2 id="params-def">測試報告重要參數說明 (Definitions)</h2>
                 <div class="table-container">
                     <table class="spec-table">
                         <thead>
@@ -56,11 +67,8 @@
                         <tbody>
                             <tr><td><strong>Attenuation (dB)</strong></td><td>訊號衰減值：訊號在傳輸過程中損失的能量。</td></tr>
                             <tr><td><strong>NEXT (dB)</strong></td><td>近端串音 (Near-End Crosstalk)：線對間的干擾值。</td></tr>
-                            <tr><td><strong>NVP</strong></td><td>標稱傳播速度：訊號在纜線傳遞速度與光速的百分比。</td></tr>
-                            <tr><td><strong>Delay Skew (ns)</strong></td><td>延遲偏離：各對絞線間傳輸延遲時間的差值。</td></tr>
                             <tr><td><strong>Headroom</strong></td><td>淨空高度：NEXT 測試值與標準極限值間的最小差值。</td></tr>
                             <tr><td><strong>Return Loss (dB)</strong></td><td>反射損耗：由於阻抗不匹配引起的訊號反射。</td></tr>
-                            <tr><td><strong>Wire Map</strong></td><td>接線圖：檢查絞線腳位是否正確連接（PASS/FAIL）。</td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -70,8 +78,6 @@
                 <h2 id="test-example">實際測試報告範例 (Real Example)</h2>
                 <div class="cert-box">
                     <p><strong>案件名稱：台南縣立文化中心</strong> <span style="float:right; color: #008080; font-weight: bold;">Result: PASS</span></p>
-                    <p style="font-size: 0.9em; color: #666;">Site: 新營市中正路23號 | Date: 2003/11/19</p>
-                    
                     <div class="table-container">
                         <table class="data-table" style="font-size: 0.9em;">
                             <tr class="sub-header">
@@ -89,29 +95,14 @@
                                 <td>106</td>
                             </tr>
                             <tr>
-                                <td><strong>Length (m)</strong></td>
-                                <td>28.2</td>
-                                <td>28.0</td>
-                                <td>27.6</td>
-                                <td>28.0</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Return Loss (dB)</strong></td>
-                                <td>21.4</td>
-                                <td>18.0</td>
-                                <td>23.3</td>
-                                <td>24.4</td>
-                            </tr>
-                            <tr>
                                 <td><strong>NEXT Margin (dB)</strong></td>
                                 <td>15.6</td>
                                 <td>13.4</td>
                                 <td>24.5</td>
                                 <td>17.5</td>
                             </tr>
-                        </tbody>
-                    </table>
-                </div>
+                        </table>
+                    </div>
                 </div>
 
                 <hr>
@@ -125,7 +116,6 @@
                         <tbody>
                             <tr><td width="50%"><strong>Gauge</strong></td><td>24 AWG</td></tr>
                             <tr><td><strong>Outside Diameter</strong></td><td>5.6 mm</td></tr>
-                            <tr><td><strong>Operating Temp</strong></td><td>-20 to 60 °C</td></tr>
                             <tr><td><strong>NVP</strong></td><td>0.69 (69%)</td></tr>
                         </tbody>
                     </table>
@@ -145,30 +135,18 @@
                         </thead>
                         <tbody>
                             <tr><td>1 MHz</td><td>1.9</td><td>73</td></tr>
-                            <tr><td>10 MHz</td><td>6.3</td><td>56</td></tr>
                             <tr><td>100 MHz</td><td>20.7</td><td>42</td></tr>
                         </tbody>
                     </table>
                 </div>
 
-                <hr>
-
-                <h2 id="optispeed">OptiSPEED &reg; (Fiber Solutions)</h2>
-                <div class="table-container">
-                    <table class="spec-table">
-                        <thead>
-                            <tr><th colspan="2">DSX Cable Physical Specifications</th></tr>
-                        </thead>
-                        <tbody>
-                            <tr><td width="50%"><strong>Max Nominal Length</strong></td><td>6 km</td></tr>
-                            <tr><td><strong>Bending Radius (Load)</strong></td><td>20x Cable Diameter</td></tr>
-                            <tr><td><strong>Pulling Tension</strong></td><td>275 kg</td></tr>
-                        </tbody>
-                    </table>
+                <div style="text-align: center; margin-top: 50px;">
+                    <p>需要查詢具體產品？</p>
+                    <a href="product-gigabit.html" class="action-btn">查看 GigaSPEED 銅纜產品 →</a>
                 </div>
 
-                <div style="text-align: right; margin-top: 20px;">
-                    <a href="#" class="back-link">↑ 回到頂端 (TOP)</a>
+                <div class="back-to-top" style="text-align: right; margin-top: 40px; border-top: 1px dashed #ddd; padding-top: 10px;">
+                    <a href="#top" style="text-decoration: none; color: #008080; font-weight: bold;">↑ 回到頂端 (Back to Top)</a>
                 </div>
             </main>
         </div>

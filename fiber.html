@@ -3,105 +3,226 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>光纖技術及應用 - 宏翔科技 Atsun Technology</title>
+    <title>光纖技術知識庫 - 宏翔科技 Atsun Technology</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <div class="container">
         
-        <header>
-            <a href="default.html"><img src="images/F2.gif" alt="Atsun Technology Logo"></a>
+        <header id="top">
+            <a href="default.html"><img src="images/F2.gif" alt="宏翔科技 Logo"></a>
         </header>
 
         <nav>
-            <a href="default.html">[公司簡介]</a> 
+            <a href="default.html">[公司簡介]</a>
             <a href="service.html">[服務項目]</a>
             <a href="products.html">[產品簡覽]</a>
             <a href="specs.html">[參數介紹]</a>
             <a href="fiber.html" class="active-page">[光纖技術]</a>
-            <a href="resources.html">[網路資源]</a>
             <a href="contact.html">[與我們聯絡]</a>
         </nav>
 
-        <main>
-            <h1>光纖技術及應用 (Fiber Technology)</h1>
-
-            <div class="anchor-nav">
-                <a href="#evolution">光纖演進</a>
-                <a href="#features">特點比較</a>
-                <a href="#structure">基本結構</a>
-                <a href="#types">光纖分類</a>
-                <a href="#cable">光纜結構</a>
-                <a href="#connectors">光纖跳線</a>
-            </div>
-
-            <hr>
-            <h2 id="evolution">光纖的演進 (Evolution)</h2>
+        <div class="content-wrapper">
             
-            <div class="timeline-item">
-                <span class="timeline-year">1966</span>
-                美籍華人高錕及 Georgo A. Hockham 根據介質波導理論共同提出光纖通訊的概念。
-            </div>
+        <aside class="sidebar">
+            <h3>光纖百科導覽</h3>
+            <ul class="product-menu">
+                <li><strong>基礎原理</strong></li>
+                <li class="sub-item"><a href="#evolution">光纖演進史</a></li>
+                <li class="sub-item"><a href="#physics">物理原理 (全反射)</a></li>
+                <li class="sub-item"><a href="#structure">基本結構與尺寸</a></li>
+                
+                <li style="margin-top:15px;"><strong>技術分類</strong></li>
+                <li class="sub-item"><a href="#singlemode">單模光纖 (SM)</a></li>
+                <li class="sub-item"><a href="#multimode">多模光纖 (MM)</a></li>
+                <li class="sub-item"><a href="#sources">光源種類 (LED/Laser)</a></li>
             
-            <div class="timeline-item">
-                <span class="timeline-year">1970</span>
-                美國康寧公司首次研發出級射率光纖，同年貝爾實驗室研發出發光器。
-            </div>
+                <li style="margin-top:15px;"><strong>工程與應用</strong></li>
+                <li class="sub-item"><a href="#cable-construction">光纜構造設計</a></li>
+                <li class="sub-item"><a href="#parameters">關鍵技術參數表</a></li>
             
-            <div class="timeline-item">
-                <span class="timeline-year">Today</span>
-                光纖通訊由原有的 45 Mbit/s 提升至目前的 40 Gbit/s 以上。
-            </div>
+                <li class="nav-divider"><strong>回產品目錄 (Products)</strong></li>
+                <li class="sub-item">
+                    <a href="product-fiber-series.html" class="back-link">← 光纖線材系列</a>
+                </li>
+                <li class="sub-item">
+                    <a href="product-fiber-enclosures.html" class="back-link">← 光纖收容箱系列</a>
+                </li>
+                <li class="sub-item">
+                    <a href="products.html" class="back-link">← 所有產品總覽</a>
+                </li>
+            </ul>
+        </aside>
 
-            <hr>
-            <h2 id="features">光纖通訊的特點 (Comparison)</h2>
+            <main class="main-content">
+                <h1>光纖技術及工程應用 (Fiber Optic Knowledge Base)</h1>
+                <p>光纖通訊是利用光波在玻璃或塑料纖維中進行數據傳輸的技術。本章節由宏翔科技工程團隊整理，旨在提供最權威的技術指南。</p>
+                <hr>
 
-            <div class="table-container">
-                <table class="comparison-table">
-                    <thead>
-                        <tr>
-                            <th>優點 (Pros)</th>
-                            <th>缺點 (Cons)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <ul class="service-list">
-                                    <li>高頻寬，通訊量大</li>
-                                    <li>衰減小，傳輸距離遠</li>
-                                    <li>抗電磁干擾，保密性高</li>
-                                    <li>尺寸小，重量輕</li>
-                                </ul>
-                            </td>
-                            <td>
-                                <ul class="service-list">
-                                    <li>光纖彎曲半徑不宜過小</li>
-                                    <li>光纖終端處理不易</li>
-                                    <li>分路及藕合操作繁瑣</li>
-                                </ul>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+                <h2 id="evolution">1. 光纖的演進 (Evolution)</h2>
+                <div class="timeline-item">
+                    <span class="timeline-year">1966</span>
+                    高錕及 Georgo.A.Hockham 根據介質波導理論共同提出光纖通訊的概念。
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-year">1970</span>
+                    康寧公司成功研發出級射率光纖；同年貝爾實驗室研發出發光器，拉開光纖通訊序幕。
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-year">Today</span>
+                    通訊量由原有的 45 Mbit/s 提升至目前的 40 Gbit/s 以上。
+                </div>
 
-            <hr>
-            <h2 id="structure">光纖基本結構與尺寸</h2>
-            <div style="text-align: center; margin: 20px 0;">
-                <img src="images/fiber.1.gif" alt="Optical Fiber Structure Diagram">
-            </div>
+                <hr>
 
-            <h2 id="types">光纖的分類 (Propagation Modes)</h2>
-            
-            <h3>1. 單模 (Singlemode)</h3>
-            <p>核心直徑非常小 (僅 5~10 μm)，僅能有效地傳送一個模態。</p>
+                <h2 id="physics">2. 物理原理：全反射 (Total Internal Reflection)</h2>
+                <p>光纖能長距離傳輸訊號，核心原理是利用光在不同折射率介質界面發生的<strong>全反射</strong>現象。</p>
+                
+                <div style="text-align: center; margin: 20px 0;">
+                    <img src="images/fiber.1.gif" alt="光纖全反射原理圖" style="max-width: 100%; border: 1px solid #ddd; padding: 5px;">
+                </div>
 
-            <h3>2. 多模 (Multimode)</h3>
-            <p>核心直徑較大，分為級射率 (Step-Index) 與漸變折射率 (Graded Index) 兩類。</p>
+                <div class="note-box">
+                    <p><strong>技術核心：</strong> 纖衣的折射率大於核心。當光線以小於臨界角射入時，光以全反射方式傳播；若大於臨界角，光則被鍍膜吸收。</p>
+                </div>
 
-        </main>
+                <hr>
+
+                <h2 id="structure">3. 光纖基本結構與尺寸 (Structure & Sizes)</h2>
+                <p>光纖從內到外主要由核心、纖衣、鍍膜、緩衝層及加強工件與外層披覆組成。</p>
+
+                <div style="text-align: center; margin: 20px 0;">
+                    <img src="images/fiber.7.gif" alt="光纖基本結構圖" style="max-width: 80%; border: 1px solid #ddd; padding: 5px;">
+                </div>
+
+                <h3>核心尺寸比較 (Core Size Comparison)</h3>
+                <p>不同類型的光纖，其最主要的差異在於核心直徑的大小（單位：μm）：</p>
+                <div style="text-align: center; margin: 20px 0;">
+                    <img src="images/fiber.2.gif" alt="光纖尺寸比較" style="max-width: 100%; border: 1px solid #ddd; padding: 5px;">
+                </div>
+
+                <hr>
+
+                <h2 id="propagation">4. 光纖傳播模態分類 (Propagation Modes)</h2>
+                <p>依據光在光纖中傳播模態數量的不同，可分為單模與多模光纖。</p>
+
+                <h3 id="singlemode">4.1 單模光纖 (Singlemode, SM)</h3>
+                <div class="content-wrapper" style="margin-top: 0;">
+                    <div style="flex: 1;">
+                        <img src="images/fiber.5.jpg" alt="單模光纖示意圖" style="width: 100%; border: 1px solid #ddd; padding: 5px;">
+                    </div>
+                    <div style="flex: 1; padding-left: 20px;">
+                        <p><strong>特性：</strong> 核心直徑極小 (5~10 μm)，僅能有效地傳送一個模態。</p>
+                        <p><strong>優勢：</strong> 可極大程度減少模間色散，傳輸距離最遠。</p>
+                    </div>
+                </div>
+
+                <h3 id="multimode" style="margin-top: 30px;">4.2 多模光纖 (Multimode, MM)</h3>
+                <p>核心直徑較大 (50μm 或 62.5μm)，允許多個模態的光同時傳播。</p>
+
+                <h4>A. 級射率多模 (Step-Index MM)</h4>
+                <img src="images/fiber.3.jpg" alt="級射率多模光纖圖" style="width: 100%; border: 1px solid #ddd; padding: 5px; margin-bottom: 10px;">
+                <p style="font-size: 0.9em; color: #666;">級射率光纖雖然在高頻寬及低損耗上不是最有效，但是目前最廣泛使用的類型。</p>
+
+                <h4>B. 漸變折射率多模 (Graded-Index MM)</h4>
+                <img src="images/fiber.4.jpg" alt="漸變折射率多模光纖圖" style="width: 100%; border: 1px solid #ddd; padding: 5px; margin-bottom: 10px;">
+                <p style="font-size: 0.9em; color: #666;">核心有無數中心層玻璃，折射率由軸心向外層遞減，可有效減少模間色散。</p>
+
+                <hr>
+
+                <h2 id="sources">5. 發光器種類 (Light Sources)</h2>
+                <p>多模光纖通常搭配廉價的 LED 光源，而單模光纖則需使用高功率的 LASER (雷射) 光源。</p>
+                
+                <div style="text-align: center; margin: 20px 0;">
+                    <img src="images/fiber.6.jpg" alt="發光器種類圖" style="max-width: 100%; border: 1px solid #ddd; padding: 5px;">
+                </div>
+
+                <hr>
+
+                <h2 id="cable-construction">6. 光纜構造設計 (Cable Construction)</h2>
+                <p>加強工件（如 Kevlar 或 FRP 棒）負責支撐張力與壓力，確保光纖在施工中不受損。</p>
+
+                <div style="text-align: center; margin: 20px 0;">
+                    <img src="images/fiber.8.jpg" alt="光纜加強工件圖" style="max-width: 60%; border: 1px solid #ddd; padding: 5px;">
+                </div>
+
+                <h3>室內與室外光纜 (Indoor vs. Outdoor Cables)</h3>
+                <p>光纜披覆提供保護免於磨損、酸鹼或溶劑影響。依環境不同分為室內型與室外型。</p>
+                <div style="text-align: center; margin: 20px 0;">
+                    <img src="images/fiber.9.jpg" alt="室內與室外光纜圖" style="max-width: 100%; border: 1px solid #ddd; padding: 5px;">
+                </div>
+
+                <hr>
+
+                <h2 id="parameters">7. 國際技術參數參考表 (ISO/EN Parameters)</h2>
+                <div class="table-container">
+                    <table class="data-table" style="text-align: center;">
+                        <thead>
+                            <tr>
+                                <th rowspan="2" style="vertical-align: middle;">參數 (Parameter)</th>
+                                <th colspan="2">多模 (Multimode)</th>
+                                <th colspan="2">單模 (Singlemode)</th>
+                            </tr>
+                            <tr>
+                                <th class="sub-header">850nm</th>
+                                <th class="sub-header">1300nm</th>
+                                <th class="sub-header">1310nm</th>
+                                <th class="sub-header">1550nm</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="text-align: left;"><strong>衰減值 Attenuation</strong> (dB/km)</td>
+                                <td>3.5 max</td>
+                                <td>1.0 max</td>
+                                <td>N/A</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;"><strong>頻寬 Bandwidth</strong> (MHz·km)</td>
+                                <td>200 min</td>
+                                <td>500 min</td>
+                                <td>N/A</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;"><strong>接頭損耗 Connector Loss</strong> (dB)</td>
+                                <td>0.75 max</td>
+                                <td>0.75 max</td>
+                                <td>0.75 max</td>
+                                <td>0.75 max</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;"><strong>反射損耗 Return Loss</strong> (dB)</td>
+                                <td>20 min</td>
+                                <td>20 min</td>
+                                <td>26 min</td>
+                                <td>26 min</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;"><strong>熔接損耗 Splice Loss</strong> (dB)</td>
+                                <td>0.3 max</td>
+                                <td>0.3 max</td>
+                                <td>0.3 max</td>
+                                <td>0.3 max</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="back-to-top">
+                    <a href="#top">↑ 回到頂端 (Back to Top)</a>
+                </div>
+
+                <div style="text-align: center; margin-top: 40px;">
+                    <a href="contact.html" class="action-btn">聯繫宏翔了解更多 →</a>
+                </div>
+
+            </main>
+        </div>
+
+
 
         <footer>
             <p>&copy; 宏翔科技 Atsun Technology. All rights reserved.</p>
