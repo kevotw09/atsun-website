@@ -1,4 +1,8 @@
-/* --- 基礎設定與字體 --- */
+/* --- 1. 基礎設定與字體 (Base Styles) --- */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Microsoft JhengHei", Arial, sans-serif;
     line-height: 1.6;
@@ -8,12 +12,7 @@ body {
     padding: 0;
 }
 
-/* 讓全站的錨點跳轉具備平滑滾動效果 */
-html {
-    scroll-behavior: smooth;
-}
-
-/* --- 主容器：已更新為 1200px 寬度 --- */
+/* --- 2. 主容器佈局 (Layout) --- */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -22,48 +21,6 @@ html {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-/* --- 頁首與導覽列 --- */
-header {
-    text-align: center;
-    padding: 20px 0;
-}
-
-header img {
-    max-width: 300px;
-}
-
-nav {
-    background-color: #008080; /* 宏翔綠 */
-    padding: 10px;
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-/* --- 導覽列基礎樣式 --- */
-nav a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 15px;
-    font-size: 16px; /* 設定一個基礎字體大小 */
-    font-weight: normal;
-    transition: all 0.3s ease; /* 增加平滑過渡效果 */
-}
-
-/* --- 當前頁面 (Active Page) 與 懸停 (Hover) --- */
-nav a.active-page {
-    font-size: 19px;        /* 放大字體，讓它明顯跳出來 */
-    font-weight: 900;       /* 使用極粗體 */
-    color: #FFFFEB;         /* 保持宏翔經典米黃色，增加對比 */
-    text-decoration: none;  /* 移除底線，改用邊框或字體大小區隔 */
-    border-bottom: 3px solid #FFFFEB; /* 在下方加入一條橫線，讓導覽更具象 */
-}
-
-nav a:hover {
-    color: #FFFFEB;
-    text-decoration: underline;
-}
-
-/* --- 內容佈局 (側邊欄 + 主內容) --- */
 .content-wrapper {
     display: flex;
     gap: 40px;
@@ -80,12 +37,90 @@ nav a:hover {
     flex: 1;
 }
 
-/* 針對 service.html 等無側邊欄頁面 */
 .full-main-content {
     width: 100%;
 }
 
-/* --- 側邊欄導覽選單 --- */
+/* --- 3. 頁首與頂部導覽 (Header & Main Nav) --- */
+header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+header img {
+    max-width: 300px;
+    height: auto;
+}
+
+nav {
+    background-color: #008080; /* 宏翔綠 */
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+nav a.active-page {
+    font-size: 19px;
+    font-weight: 900;
+    color: #FFFFEB;
+    border-bottom: 3px solid #FFFFEB;
+}
+
+nav a:hover {
+    color: #FFFFEB;
+    text-decoration: underline;
+}
+
+/* --- 4. 地址資訊樣式 (Address Info) --- */
+.address-info {
+    margin-top: 15px;
+    line-height: 1.4;
+    color: #555;
+    text-align: center;
+}
+
+.address-info address {
+    font-style: normal;
+}
+
+.addr-zh {
+    font-weight: bold;
+    color: #333;
+    font-size: 1.1em;
+    margin: 0;
+}
+
+.addr-en {
+    font-size: 0.9em;
+    color: #333;
+    margin: 2px 0;
+}
+
+.addr-contact {
+    margin: 5px 0;
+    font-size: 0.95em;
+}
+
+.addr-contact strong {
+    color: #008080;
+}
+
+.addr-person {
+    margin-top: 8px;
+    padding: 2px 0;
+    display: inline-block;
+    font-size: 0.95em;
+}
+
+/* --- 5. 側邊欄選單 (Sidebar Menu) --- */
 .sidebar h3 {
     color: #008080;
     border-bottom: 2px solid #008080;
@@ -104,18 +139,16 @@ nav a:hover {
 .sub-item a {
     text-decoration: none;
     color: #666;
-    font-size: 0.95em;
     display: block;
     padding: 5px 10px;
 }
 
 .sub-item a:hover, .sub-item a.active {
     background-color: #008080;
-    color: white;
+    color: white !important;
     border-radius: 4px;
 }
 
-/* 側邊欄：回產品目錄連結 */
 .sidebar .back-catalog-header {
     margin-top: 30px;
     padding-top: 20px;
@@ -125,14 +158,42 @@ nav a:hover {
 .sidebar .back-link {
     color: #008080 !important;
     font-weight: bold;
+    text-decoration: none;
 }
 
-.sidebar .back-link:hover {
-    color: #cc6666 !important;
+/* --- 6. 表格與數據 (Tables) --- */
+.table-container {
+    overflow-x: auto;
+    margin: 20px 0;
 }
 
-/* --- 產品網格與卡片樣式 --- */
-.product-grid {
+.spec-table, .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+.spec-table th, .spec-table td, 
+.data-table th, .data-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+}
+
+.spec-table th, .sub-header {
+    background-color: #FF9999; /* 宏翔參數表經典粉紅色 */
+    color: #333;
+    font-weight: bold;
+}
+
+.cert-box {
+    background-color: #EBF7FF;
+    border: 1px solid #66CCFF;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+/* --- 7. 產品與實績網格 (Grids) --- */
+.product-grid, .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
@@ -152,81 +213,28 @@ nav a:hover {
     border-color: #008080;
 }
 
-.product-card img {
+.product-card img, .gallery img {
     max-width: 100%;
     height: auto;
-    margin-bottom: 15px;
-}
-
-/* --- 工程實績藝廊樣式 (Gallery) --- */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 25px;
-    margin-top: 30px;
-}
-
-.gallery img, .gallery-item img {
-    width: 100%;
-    height: 100%;
     object-fit: cover;
-    border: 1px solid #ddd;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
 }
 
-/* 圖片懸停放大效果 */
-.gallery img:hover, .gallery-item:hover img {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-/* --- 比例設定 (如 7:3 的機櫃圖) --- */
-.tall-rack, .tall-rack-display {
-    aspect-ratio: 3 / 7;
-    grid-row: span 2;
-}
-
-/* --- 表格與數據展示 --- */
-.table-container {
-    overflow-x: auto;
+.main-rack-img {
+    max-width: 100%;
+    height: auto;
     margin: 20px 0;
 }
 
-.spec-table, .data-table {
-    width: 100%;
-    border-collapse: collapse;
-    background: white;
-}
-
-.spec-table th, .spec-table td, 
-.data-table th, .data-table td {
-    border: 1px solid #ddd;
-    padding: 12px;
-    text-align: left;
-}
-
-.spec-table th, .sub-header {
-    background-color: #FF9999; /* 宏翔參數表經典粉紅色 */
-    color: #333;
-}
-
-/* --- 其他通用元件 --- */
-.cert-box {
-    background-color: #EBF7FF;
-    border: 1px solid #66CCFF;
-    padding: 20px;
-    margin: 20px 0;
-}
-
+/* --- 8. 通用元件 --- */
 .action-btn {
+    display: inline-block;
     background-color: #008080;
     color: white;
     padding: 12px 25px;
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
+    margin: 5px;
 }
 
 .action-btn:hover {
@@ -246,7 +254,85 @@ nav a:hover {
     font-weight: bold;
 }
 
-/* --- 頁尾 --- */
+/* --- 9. 響應式設計 (Responsive Optimization) --- */
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px 20px;
+    }
+
+    .content-wrapper {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .sidebar {
+        flex: none;
+        width: 100%;
+        border-right: none;
+        border-bottom: 2px solid #008080;
+        padding: 10px 0;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background-color: #f9fbfb;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .sidebar h3 {
+        display: none;
+    }
+
+    .product-menu {
+        display: flex;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        margin: 0;
+        padding: 5px 10px;
+    }
+
+    .product-menu li {
+        margin: 0 10px 0 0;
+        display: inline-block;
+    }
+
+    .sidebar .back-catalog-header {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .contact-grid {
+        display: block !important;
+    }
+
+    .map-container {
+        height: 300px !important;
+    }
+
+    .inquiry-form input, .inquiry-form textarea {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- 10. 頁尾 --- */
 footer {
     text-align: center;
     padding: 30px 0;
@@ -254,4 +340,13 @@ footer {
     color: #666;
     border-top: 1px solid #ddd;
     margin-top: 50px;
+}
+
+
+
+/* Create a special class for a centered, narrower layout */
+.centered-content {
+    max-width: 900px; /* This matches the typical width of the 'main-content' on other pages */
+    margin: 0 auto;
+    padding: 20px 0;
 }
