@@ -350,3 +350,64 @@ footer {
     margin: 0 auto;
     padding: 20px 0;
 }
+
+
+
+/* --- 機櫃尺寸表專用樣式 (Rack Size Table Styles) --- */
+.size-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 0.95em;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05); /* 輕微陰影增加立體感 */
+}
+
+.size-table thead tr {
+    background-color: #008080; /* 宏翔綠表頭 */
+    color: #ffffff;
+    text-align: left;
+}
+
+.size-table th, 
+.size-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+/* 第一欄 (型號) 加粗並給予淡色背景 */
+.size-table td:first-child {
+    font-weight: bold;
+    color: #006666;
+    background-color: #fcfcfc;
+}
+
+/* 偶數行底色 (Zebra Striping) - 讓閱讀不跑行 */
+.size-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+/* 滑鼠懸停效果 (Hover Highlight) */
+.size-table tbody tr:hover {
+    background-color: #e0f2f1; /* 淡綠色高亮 */
+    cursor: default;
+    transition: background-color 0.2s ease;
+}
+
+/* 分隔標題行 (Section Separators) */
+.section-row {
+    background-color: #FF9999 !important; /* 經典粉紅分隔線 */
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+
+/* Add this to your CSS if you haven't already */
+.section-row td {
+    background-color: #FFD1D1 !important; /* Pink header */
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 1px;
+}
